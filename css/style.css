@@ -50,6 +50,7 @@ body {
 
 .main-heading {
     padding: 50px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -325,5 +326,57 @@ header .container nov .search i:hover {
     border-color: var(--mainColor);
 }
                  /* End landing */
+
+                /* start services */
+
+.srvices .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 40px
+}
+
+.srvices .container .service {
+    display: flex;
+}
+
+.srvices .container .service i {
+    font-size: 34px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.srvices .container .service .text-serv h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--mainColor);
+}
+
+.srvices .container .service .text-serv p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 991px) {
+
+    .srvices .container {display: block;}
+
+    .srvices .container .service {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .srvices .container .service i {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    .srvices .container .service .text-serv p {
+        text-align: center;
+    }
+}
+                /* End services */
 
 
