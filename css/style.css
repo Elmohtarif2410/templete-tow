@@ -3,6 +3,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -13,7 +15,8 @@ html {
     --mainTranstion: .5s;
     --mainColor: #19c8fa;
     --color-overlay: #00f;
-    --main-padding: 80px
+    --main-padding: 80px;
+    --main-opacity-color: rgb(25, 200, 250, 0.7);
 }
 
 body {
@@ -431,7 +434,7 @@ header .container nov .search i:hover {
     z-index: 2;
     transform: translateY(-50%);
     width: 50%;
-    background-color: rgb(25, 200, 250, 0.7);
+    background-color: var(--main-opacity-color);
     padding: 30px;
 }
 
@@ -454,6 +457,7 @@ header .container nov .search i:hover {
     position: relative;
     margin-bottom: 15px;
     text-transform: capitalize;
+    margin-left: 40px;
 }
 
 .design-comes .cuntent ul li::before {
@@ -481,7 +485,6 @@ header .container nov .search i:hover {
 
 .portfolio ul li {
     padding: 6px 12px;
-    margin-left: 10px;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -491,7 +494,132 @@ header .container nov .search i:hover {
     background-color: var(--mainColor);
     color: #fff;
 }
+
+.port-imge {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.port-imge figure {
+    flex-basis: 25%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: var(--mainTranstion);
+    cursor: pointer;
+}
+
+.port-imge figure:hover .text {
+    z-index: 2;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    transition: var(--mainTranstion);
+}
+
+.port-imge figure:hover img {
+    transform: scale(1.2) rotate(10deg);
+    transition: var(--mainTranstion);
+}
+
+.port-imge figure img {
+    width: 100%;
+    height: 250px;
+}
+
+@media (max-width: 991px) {
+    .port-imge figure {flex-basis: 50%;}
+    .port-imge figure img {height: 350px}
+}
+
+@media (max-width: 767px) {
+    .port-imge figure {flex-basis: 100%;}
+    .port-imge figure img {height: 400px}
+}
+
+.port-imge figure .text {
+    position: absolute;
+    padding: 25px
+}
+
+.port-imge figure .text h3 {  
+    margin-bottom: 8px
+}
+
+.port-imge figure .text p {  
+    font-size: 14px;
+    color: var(--mainColor)
+}
+
+.portfolio .buttom {
+    width: fit-content;
+    padding: 10px 25px;
+    background-color: var(--mainColor);
+    color: #fff;
+    margin: 25px auto 0;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
                 /* End portofolio */
 
+                /* Start video */
+
+.video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-overlay);
+    opacity: .2;
+}
+
+.video video {
+    width: 100%
+}
+
+.video .text {
+    position: absolute;
+    padding: 30px;
+    background-color: rgb(25, 200, 250, 0.7);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.video .text h2 {
+    text-transform: uppercase;
+}
+
+.video .text p {
+    margin: 25px 0;
+}
+
+.video .text button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+                /* End video */
 
 
