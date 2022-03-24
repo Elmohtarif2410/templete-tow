@@ -622,4 +622,39 @@ header .container nov .search i:hover {
 
                 /* End video */
 
+                /* start about-us */
+
+.about-us {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.about-us figure {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.about-us figure img {
+    width: 100%;
+    position: relative;
+    bottom: -130px;
+    margin-top: -130px;
+}
+
+@media (max-width: 991px) {
+    .about-us figure img {
+        bottom: -75px;
+        margin-top: -75px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-us figure img {
+        bottom: -50px;
+        margin-top: -50px;
+    }
+}
+
+                /* End about-us */
 
