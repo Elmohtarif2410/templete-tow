@@ -626,7 +626,6 @@ header .container nov .search i:hover {
 
 .about-us {
     padding-top: var(--main-padding);
-    padding-bottom: var(--main-padding);
 }
 
 .about-us figure {
@@ -657,4 +656,60 @@ header .container nov .search i:hover {
 }
 
                 /* End about-us */
+
+                /* Start status */
+
+.status {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../imges/Status.jpg);
+    background-size: cover;
+}
+
+.status .container {
+    padding: 25px;
+    color: #fff;
+    background-color: var(--main-opacity-color);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.status .container .stat {
+    flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+    .status .container .stat {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .status .container .stat {
+        flex-basis: 25%;
+    }
+}
+
+.status .container .stat i {
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status .container .stat section {
+    font-size: 40px;   
+}
+
+.status .container .stat p {
+    margin: 20px 0;
+}
+
+                /* End status */
 
