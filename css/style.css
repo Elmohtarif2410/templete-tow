@@ -713,3 +713,185 @@ header .container nov .search i:hover {
 
                 /* End status */
 
+                /* start  Monials & skills */
+
+.monials-skills{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding)
+}
+
+.monials-skills .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "mon mon mon mon mon - - skill skill skill skill skill";
+}
+
+@media (max-width: 991px) {
+    .monials-skills .container {
+        display: block;
+    }
+}
+
+@media (max-width: 1199px) {
+    .monials-skills .container {
+        grid-template-areas: "mon mon mon mon mon mon - skill skill skill skill skill";
+    }
+}
+
+/* style two sections [monials & skills] */
+.monials-skills .container > div section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.monials-skills .container > div section h3 {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+.monials-skills .container > div section p {
+    line-height: 1.6;
+    color: #777;
+}
+
+    /* syle article two divs */
+
+.monials-skills .container .monials {
+    grid-area: mon;
+}
+
+.monials-skills .container .monials .mon {
+    display: flex;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.monials-skills .container .monials .mon img {
+    width: 110px;
+    border-radius: 50%;
+}
+
+.monials-skills .container .monials .mon .text {
+    margin-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+    .monials-skills .container .monials {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .monials-skills .container .monials .mon {
+        display: block;
+        text-align: center;
+    }
+
+    .monials-skills .container .monials .mon .text {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+.monials-skills .container .monials .mon .text p {
+    color: #777;
+    text-align: right;
+    font-size: 14px;
+    font-style: italic ;
+}
+
+.monials-skills .container .monials ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.monials-skills .container .monials ul li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.monials-skills .container .monials ul li:nth-of-type(2),
+.monials-skills .container .monials ul li:hover {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor)
+}
+
+
+.monials-skills .container .skills {
+    grid-area: skill;
+}
+
+.monials-skills .container .skills .pogress {
+    margin-bottom: 25px;
+}
+
+.monials-skills .container .skills h4 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.monials-skills .container .skills .prog {
+    height: 35px;
+    background: #eee;
+}
+
+.monials-skills .container .skills .prog span {
+    display: block;
+    height: 35px;
+    background-color: var(--mainColor); 
+    position: relative;
+}
+
+.monials-skills .container .skills .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    color: #fff;
+    background-color: #333;
+    padding: 5px;
+    top: -40px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.monials-skills .container .skills .prog span::after {
+    content: "";
+    border: 10px solid;
+    border-color: #333 transparent transparent transparent;
+    position: absolute; 
+    right: 0;
+    transform: translate(50%, -70%);
+
+}
+                /* End  Monials & skills */
+
+                /* Start Quote  */
+
+.quote {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../imges/quote.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: center;
+    color: #fff
+}       
+
+.quote q {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+                /* End Quote  */
