@@ -21,7 +21,7 @@ html {
 
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    height: 10000px;
+    min-height: 10000px;
 }
 
 .container {
@@ -110,7 +110,7 @@ body {
 
                 /* Start Header */
 
-header {
+body > header {
     position: absolute;
     top: 0;
     left: 0;
@@ -895,3 +895,48 @@ header .container nov .search i:hover {
 }
 
                 /* End Quote  */
+
+                /* start Pricing */
+
+.pricing {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding)
+}
+
+.pricing .table {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.pricing .table > section {
+    background-color: #fcfcfc;
+}
+
+.pricing .table > section ul {
+    list-style: none;
+}
+
+
+
+
+.pricing .container > p {
+    margin-top: 50px;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.pricing .container > p + button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    background: var(--mainColor);
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+                /* End Pricing */
