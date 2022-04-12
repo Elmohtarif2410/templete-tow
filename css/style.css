@@ -911,17 +911,76 @@ header .container nov .search i:hover {
 
 .pricing .table > section {
     background-color: #fcfcfc;
+    text-align: center;
 }
 
-.pricing .table > section ul {
+.pricing .table header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+}
+
+.pricing .table header h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-bottom: 25px;
+}
+
+.pricing .table header span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.pricing .table header span::before {
+    content: "$";
+    font-size: 16px;
+    position: relative;
+    top: -16px;
+    left: -5px;
+}
+
+.pricing .table header span::after {
+    content: "/mo";
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    right: -5px;
+}
+
+.pricing .table  ul {
     list-style: none;
+    border-bottom: 1px solid var(--mainColor)
 }
 
+.pricing .table  ul li {
+    width: fit-content;
+    margin: auto;
+    text-transform: capitalize;
+    font-size: 14px;
+    padding: 25px 10px;
+}
 
+.pricing .table  ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--mainColor);
+}
 
+.pricing .table  .button {
+    padding: 15px 25px;
+    border: 2px solid var(--mainColor);
+    width: fit-content;
+    margin: 30px auto 0;
+    border-bottom: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.pricing .table section:first-of-type .button {border-right: none}
+.pricing .table  section:nth-last-of-type(2) .button {border-left: none}
 
 .pricing .container > p {
-    margin-top: 50px;
+    margin-top: 70px;
     font-size: 20px;
     color: #333;
     text-align: center;
