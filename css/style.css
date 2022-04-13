@@ -999,3 +999,14 @@ header .container nov .search i:hover {
 }
 
                 /* End Pricing */
+
+                /* Start supscrip */
+
+.supscrip {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../imges/po-6.jpg);
+    background-size: cover;
+}
+
+                /* End supscrip */
