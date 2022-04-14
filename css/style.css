@@ -14,7 +14,7 @@ html {
 :root {
     --mainTranstion: .5s;
     --mainColor: #19c8fa;
-    --color-overlay: #00f;
+    --color-overlay: #0000ff;
     --main-padding: 80px;
     --main-opacity-color: rgb(25, 200, 250, 0.7);
 }
@@ -45,12 +45,6 @@ body {
                 /* start compunant  */
 
 /* Main heading compunant */
-
-/* This is code has cmpunant */
-/* <div class="main-heading">
-<h2>siction</h2>
-<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt</p>
-</div> */
 
 .main-heading {
     padding: 50px;
@@ -139,8 +133,8 @@ header .container .logo img {
     width: 150px;
     z-index: 1;
 }
-                /* navgtion bar */
 
+/* navgtion bar */
 header .container nov {
     flex: 1;
     display: flex;
@@ -246,8 +240,7 @@ header .container nov .search i:hover {
 }    
 
 .landing .overlay {
-    background-color: var(--color-overlay);
-    opacity: .1;
+    background-color: rgb(0, 0, 255, .2);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -408,8 +401,7 @@ header .container nov .search i:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--color-overlay);
-    opacity: .1;
+    background-color: rgb(25, 200, 250, 0.2);
 }
 
 .design-comes figure {
@@ -423,8 +415,6 @@ header .container nov .search i:hover {
     .design-comes figure {left: 0%}
 }
 
-.design-comes figure img {
-}
 
 .design-comes .cuntent {
     position: absolute;
@@ -581,8 +571,8 @@ header .container nov .search i:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--color-overlay);
-    opacity: .2;
+    background-color: rgb(25, 200, 250, 0.2);
+    z-index: -1;
 }
 
 .video video {
@@ -663,6 +653,18 @@ header .container nov .search i:hover {
     padding-bottom: var(--main-padding);
     background-image: url(../imges/Status.jpg);
     background-size: cover;
+    position: relative;
+}
+
+.status::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 200, 250, 0.2);
+    z-index: -1
 }
 
 .status .container {
@@ -884,8 +886,20 @@ header .container nov .search i:hover {
     background-size: cover;
     background-position: 50% 50%;
     text-align: center;
-    color: #fff
-}       
+    color: #fff;
+    position: relative;
+}
+
+.quote::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 200, 250, 0.4);
+    z-index: -1
+}
 
 .quote q {
     font-size: 40px;
@@ -1006,6 +1020,17 @@ header .container nov .search i:hover {
     padding-bottom: var(--main-padding);
     background-image: url(../imges/po-6.jpg);
     background-size: cover;
+    position: relative;
+}
+
+.supscrip::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 200, 250, 0.2);
 }
 
 .supscrip .container {
@@ -1162,7 +1187,19 @@ footer {
     background-color: #333;
     color: #fff;
     padding-top: var(--main-padding);
-    padding-bottom: calc(var(--main-padding) / 2)
+    padding-bottom: calc(var(--main-padding) / 2);
+    position: relative;
+}
+
+footer::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 200, 250, 0.2);
+    z-index: -1
 }
 
 footer img {width: 150px}
