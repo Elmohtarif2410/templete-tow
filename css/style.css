@@ -1009,4 +1009,56 @@ header .container nov .search i:hover {
     background-size: cover;
 }
 
+.supscrip .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "form form form form form form form text text text text text";
+    align-items: center;
+}
+
+.supscrip .container form {
+    grid-area: form;
+    position: relative;
+    padding-right: 25px;
+    display: flex;
+}
+
+.supscrip .container form i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.supscrip .container form input[type="email"] {
+    padding: 20px 20px 20px 45px;
+    width: 75%;
+    background: none;
+    border: 2px solid #fff;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    border-right: none;
+    caret-color: var(--mainColor);
+}
+
+.supscrip .container form input[type="submit"] {
+    background: var(--mainColor);
+    color: #fff;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 20px;
+    width: 25%;
+    text-transform: uppercase;
+    border-left: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.supscrip .container p {
+    grid-area: text;
+    color: #fff;
+    line-height: 1.6;
+}
                 /* End supscrip */
