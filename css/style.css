@@ -21,7 +21,6 @@ html {
 
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    min-height: 10000px;
 }
 
 .container {
@@ -1113,6 +1112,7 @@ header .container nov .search i:hover {
     font-size: 14px;
     padding: 25px 35px;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .contact-us .container .text {
@@ -1127,15 +1127,76 @@ header .container nov .search i:hover {
     color: #333
 }
 
-.contact-us .container .text p {
+.contact-us .container .text p,
+.contact-us .container .text address {
     margin-bottom: 80px;
     color: #777;
     line-height: 1.6
 }
 
 @media (max-width: 767px) {
-    .contact-us .container .form {display: unset}
-    .contact-us .container .text {display: none}
+    .contact-us .container .form {display: flex; flex-direction: column;}
+    .contact-us .container .text {
+        order: -1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .contact-us .container .text > * {flex-basis: 40%}
+
+    .contact-us .container .text h3 {margin-top: 20px}
+    .contact-us .container .text h3::after {content: " :";}
+
+    .contact-us .container .text p,
+    .contact-us .container .text address {margin-bottom: 40px;}
 }
 
                 /* End Contct Us */
+
+                /* Start footer */
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding-top: var(--main-padding);
+    padding-bottom: calc(var(--main-padding) / 2)
+}
+
+footer img {width: 150px}
+
+footer p:first-of-type {
+    margin: 35px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative;
+    font-size: 20px;
+}
+
+footer p:first-of-type:after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer .icon i {cursor: pointer}
+
+footer .icon i:not(:first-of-type) {margin-left: 15px}
+
+footer .icon i:hover {transform: scale(1.1); color: var(--mainColor)}
+
+footer p {
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+footer p span {color: var(--mainColor)}
+
+                /* End footer */
