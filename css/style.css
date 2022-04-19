@@ -698,6 +698,7 @@ header .container nov .search i:hover {
     padding-bottom: var(--main-padding);
     background-image: url(../imges/Status.jpg);
     background-size: cover;
+    background-position: center
 }
 
 .status .container {
@@ -1045,7 +1046,7 @@ header .container nov .search i:hover {
 .supscrip {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
-    background-image: url(../imges/po-6.jpg);
+    background-image: url(../imges/supscrip.jpg);
     background-size: cover;
 }
 
@@ -1200,7 +1201,9 @@ header .container nov .search i:hover {
 
 footer {
     text-align: center;
-    background-color: #333;
+    background-image: url(../imges/footer.jpg);
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding-top: var(--main-padding);
     padding-bottom: calc(var(--main-padding) / 2);
