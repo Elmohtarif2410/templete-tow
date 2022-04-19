@@ -38,8 +38,7 @@
         </header>
 
         <!-- landing -->
-        <div class="landing" id="home">
-            <div class="overlay"></div>
+        <div class="landing overlay" id="home">
             <div class="content">
                 <h1>hello world! <br/> we are kasper,we make art.</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis maxime animi voluptatum id saepe beatae quaerat velit dolorum vero non sequi, nesciunt, odio aliquid corporis ad, repellat possimus! Aliquam, tempore.</p>
@@ -92,7 +91,7 @@
         </div>
 
         <!-- design comes -->
-        <div class="design-comes">
+        <div class="design-comes overlay">
             <figure><img src="imges/mobile.png" alt="erorr"></figure>
             <div class="cuntent">
                 <h2>our designs comes with...</h2>
@@ -180,7 +179,7 @@
         </div>
 
         <!-- Video -->
-        <div class="video">
+        <div class="video overlay">
             <video autoplay loop muted>
                 <source src="imges/video.mp4" type="video/mp4">
                 erorr
@@ -204,7 +203,7 @@
         </div>
 
         <!-- Status -->
-        <div class="status">
+        <div class="status overlay">
             <div class="container">
                 <div class="stat">
                     <i class="fas fa-hourglass-half"></i>
@@ -295,7 +294,7 @@
         </div>
 
         <!-- Quote -->
-        <div class="quote">
+        <div class="quote overlay">
             <div class="container">
                 <q>
                     accumsan id curabitur portitor mauris blandit dolor lorem some est our donec stin lortios
@@ -371,7 +370,7 @@
         </div>
 
         <!-- Supscrip -->
-        <div class="supscrip">
+        <div class="supscrip overlay">
             <div class="container">
                 <form action="">
                     <i class="far fa-envelope fa-lg"></i>
@@ -415,7 +414,7 @@
         </div>
 
         <!-- Footer -->
-        <footer>
+        <footer class="overlay">
             <img src="imges/logo.png" alt="erorr">
             <p>we are social</p>
             <div class="icon">
@@ -428,5 +427,34 @@
                 &copy; 2022 - <span>ahmed kamal</span> all right reserved
             </p>
         </footer>
+
+        <!-- button to top body -->
+        <div class="top-page" id="top-page">
+            <span class="head"></span>
+            <span class="body"></span>
+        </div>
+
+        <script>
+            // Get Element
+            var button = document.getElementById("top-page");
+            // set scroll
+            window.onscroll = function () {
+                if (document.body.scrollTop > 700) {
+                    button.style.display = "block";
+                } else {
+                    //button.style.display = "none";
+                }
+            };
+
+            //    وضع مؤقت حتى اظبطها
+            button.style.display = "block"
+            // scroll top page
+            button.onclick = function () {   // set scroll
+                document.body.scrollTop = 0;
+            };
+            window.onscroll = function () {
+                console.log(document.body.scrollLeft);
+            };
+        </script>
     </body>
 </html>
